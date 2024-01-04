@@ -1,0 +1,24 @@
+#app {
+    display: grid; 
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+#gui {
+    background: #f1f1f1;
+    padding: 15px;
+}
+
+#artboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+#artboard canvas {
+    transform: scale(0.6);
+}
