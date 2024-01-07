@@ -1,24 +1,94 @@
+<!DOCTYPE html>
 <head>
 <title></title>
-<link rel="stylesheet" href="./p5-toolkit.css">
+<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
     <div id="app">
         <div id="gui-left">
-            <div class="component">
-                <label>headline</label>
-                <textarea id="headline">Lorem Ipsum</textarea>
-            </div>
-            <div class="component">
-                <label>diameter</label>
-                <input id="diameter" type="range" min="0" max="100" value="50">
-            </div>
-            <div class="component">
-                <label>gray</label>
-                <input id="gray" type="range" min="0" max="255" value="50">
-            </div>
+            <details open> <!-- Details Inner -->
+                
+                <summary>Resolution</summary>
+                
+                <div class="details-inner">
+                    <div class="component">
+                        <label>tilesX</label>
+                        <input id="sliderTilesX" type="range" min="2" max="100" value="25">
+                    </div>
+
+                    <div class="component">
+                        <label>tilesY</label>
+                        <input id="sliderTilesY" type="range" min="2" max="100" value="25">
+                    </div>
+                 
+                    <div class="component">
+                        <label>tileSizeMax</label>
+                        <input id="tileSizeMax" type="range" min="1" max="200" value="25">
+                    </div>
+
+                </div> <!-- // Details Inner -->
+
+            </details>
+            <details open> <!-- Details Inner -->
+                
+                <summary>Transformation</summary>
+                
+                <div class="details-inner">
+                    <div class="component">
+                        <label>Magnitude</label>
+                        <input id="sliderMag" type="range" min="1" max="150" value="75">
+                    </div>
+
+                    <div class="component">
+                        <label>rotateY</label>
+                        <input id="rotateY" type="range" min="1" max="100" value="50">
+                    </div>
+
+                </div> <!-- // Details Inner -->
+
+            </details>
+           
+            <details open> <!-- Details Inner -->
+                
+                <summary>Color</summary>
+                
+                <div class="details-inner">
+                    <div class="component">
+                        <label>Color Theme</label>
+                        <select id="colorTheme">
+                            <option value="forest">Forest</option>
+                            <option value="sea">Sea</option>
+                            <option value="sky">Sky</option>
+                        </select>
+                    </div>
+                </div> <!-- // Details Inner -->
+
+            </details>
+
+
+
+
+            <details open> <!-- Details Inner -->
+                
+                <summary>Image selector</summary>
+                
+                <div class="details-inner">
+                    <div class="component imageGallery-4">
+                        <img onclick="selectImage(this.src)" src="./img/2.jpg">
+                        <img onclick="selectImage(this.src)" src="./img/14.jpg">
+                        <img onclick="selectImage(this.src)" src="./img/5.jpg">
+                        <img onclick="selectImage(this.src)" src="./img/9.jpg">
+                        <img onclick="selectImage(this.src)" src="./img/18.jpg">
+                        <img onclick="selectImage(this.src)" src="./img/39.jpg">
+                        <img onclick="selectImage(this.src)" src="./img/43.jpg">
+                        <img onclick="selectImage(this.src)" src="./img/45.jpg">
+                    </div>
+                </div> <!-- // Details Inner -->
+
+            </details>
+
         </div>
         <div id="artboard">
             
@@ -30,5 +100,5 @@
         </div>
     </div>
 <script src="https://unpkg.com/p5@1.9.0/lib/p5.min.js"></script>
-<script src="./p5-toolkit.js"></script>
+<script src="./app.js"></script>
 </body>

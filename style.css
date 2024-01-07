@@ -19,13 +19,13 @@ html, body {
 
 
 #gui-left {
-    background: #f1f1f1;
-    padding: 15px;
+    background: #000000;
+
 }
 
 #gui-right {
-    background: #f1f1f1;
-    padding: 15px;
+    background: #000000;
+
 }
 
 #artboard {
@@ -34,13 +34,6 @@ html, body {
     align-items: center;
     background: black;
 }
-
-#artboard canvas {
-    transform: scale(0.6);
-}
-
-
-
 
 .component {
     display: flex;
@@ -93,6 +86,11 @@ button {
     background: blue;
     color: white;
     height: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+  background: red;
 }
 
 
@@ -109,3 +107,56 @@ button {
 label {
     margin-bottom: 18px;
 }
+
+details {
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+  
+  details > summary {
+    padding: 10px;
+
+    background-color: #0000ff;
+    color: white;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  details > summary:hover {
+    background: red;
+  }
+  
+  details > .details-inner {
+    background-color: #ddd;
+    padding: 10px;
+    margin: 0;
+
+  }
+  
+  details[open] > summary {
+    background-color: #0000ff;
+  }
+  
+
+  #artboard canvas {
+    width: 100px;
+    max-width: 500px;
+    height: 500px;
+    max-height: 500px;
+  }
+
+  .imageGallery-4 {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    img {
+      cursor: pointer;
+    }
+  }
