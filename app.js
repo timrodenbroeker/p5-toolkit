@@ -34,6 +34,7 @@ function draw() {
     mag = document.getElementById('sliderMag').value;
     tileSizeMax = document.getElementById('tileSizeMax').value / 100;
     rotationY = map(document.getElementById('rotateY').value,0,100,-180,180);
+    displace = map(document.getElementById('sliderDisplace').value,0,100,-1,1);
 
     let tileW = width/tilesX;
     let tileH = height/tilesY;
@@ -58,7 +59,7 @@ function draw() {
             
             push();
             rotateY(radians(rotationY));
-            translate(posX,posY);
+            translate(posX,posY,b*(displace)*4);
             rect(0,0,tileW * s,tileH*s);
             pop();
 
@@ -88,5 +89,4 @@ function selectColorTheme() {
 
 function selectImage(a) {
     img = loadImage(a);
-    
 }
